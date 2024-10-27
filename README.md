@@ -28,14 +28,14 @@ The API Gateway is a Go-based application that acts as a reverse proxy to route 
 
 ## Installation
 
-1. **Clone the repository**
-    ```sh
+- **Clone the repository**
+```bash
     git clone https://github.com/yourusername/API-Gateway.git
-    ```
-2. **Deploy all the yaml files in the folders inside K8s**
-  ```sh
+```
+- **Deploy all the yaml files in the folders inside K8s**
+```bash
     kubectl apply -f xyz.yaml
-    ```
+```
 
 ## Usage
 
@@ -72,9 +72,9 @@ The API Gateway is a Go-based application that acts as a reverse proxy to route 
 #### Access Prometheus (optional):
 - `kubectl port-forward` to access prometheus (if needed to construct promQL query)
 - Prometheus Dashboard will be accessible at `http://localhost:9090`.
-  ```sh
+```bash
   kubectl port-forward svc/prometheus 9090:9090
-  ```
+```
 #### Access Grafana
   The Dashboard will be accessible from `http://grafana.example.com`
 
