@@ -7,7 +7,7 @@ Simple API Gateway in Go
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Grafana](#Grafana Outputs)
+- [Grafana](#Grafana)
 
 ## Description
 The API Gateway is a Go-based application that acts as a reverse proxy to route requests to different backend services. It provides a single entry point for clients and handles request routing.
