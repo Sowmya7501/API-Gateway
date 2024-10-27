@@ -1,6 +1,6 @@
-# API-Gateway
-API Gateway in go
+# API Gateway
 
+Simple api-gateway in go
 
 ## Table of contents
 - [Description](#description)
@@ -8,6 +8,7 @@ API Gateway in go
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Grafana](#grafana)
 
 ## Description
 The API Gateway is a Go-based application that acts as a reverse proxy to route requests to different backend services. It provides a single entry point for clients and handles request routing.
@@ -38,38 +39,44 @@ The API Gateway is a Go-based application that acts as a reverse proxy to route 
 
 ## Usage
 
+### Access API Gateway
+- The API Gateway will be running on `http://api-gateway.example.com`.
 ### API Endpoints
 - **Task Manager API:**
+```
   - `POST /task`: Create a new task
-    ```json
+    
     # Example json
     {"assignee": "Jane", "assignor": "Dave", "name": "Task1"}
-    ```
+   
   - `GET /task`: Retrieve all tasks
   - `GET /task/{name}`: Retrieve a task by name
   - `PUT /task/{name}`: Update a task by name
   - `DELETE /task/{name}`: Delete a task by name
-
+```
 - **User Manager API:**
+```
   - `POST /user`: Create a new user
-    ```json
+ 
     # Example json
     {"userid": 1, "username": "Jane"}
-    ```
+   
   - `GET /user`: Retrieve all users
   - `GET /user/{name}`: Retrieve a user by name
   - `PUT /user/{name}`: Update a user by name
   - `DELETE /user/{name}`: Delete a user by name
+```
 
 ### Monitoring
-1. **Access the API Gateway:**
-    - The API Gateway will be running on `http://api-gateway.example.com`.
-2. **Access Prometheus and Grafana application:**
-    - `Grafana` 
-	    - The Dashboard will be accessible from `http://grafana.example.com`
-    - `Prometheus`
-	    - `kubectl port-forward` to access prometheus (if needed to construct promQL query)
-	    - Prometheus Dashboard will be accessible at `http://localhost:9090`.
+
+#### Access Prometheus (optional):
+- `kubectl port-forward` to access prometheus (if needed to construct promQL query)
+- Prometheus Dashboard will be accessible at `http://localhost:9090`.
   ```sh
-	    kubectl port-forward svc/prometheus 9090:9090
-  ```
+  kubectl port-forward svc/prometheus 9090:9090
+  ```
+#### Access Grafana
+  The Dashboard will be accessible from `http://grafana.example.com`
+
+## Grafana
+
