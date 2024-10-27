@@ -79,10 +79,10 @@ The API Gateway is a Go-based application that acts as a reverse proxy to route 
   The Dashboard will be accessible from `http://grafana.example.com`
 
 ## Grafana
-CPU and Memory Usage by pods
+- CPU and Memory Usage by pods
 <img width="604" alt="grafana_pr_cpu_mem" src="https://github.com/user-attachments/assets/0b0e5dc8-bc6a-47ca-b110-1d717ee12c6f">
 
-Metrics on APIs
+- Metrics on APIs
 <img width="599" alt="grafana_pr_api_reqres" src="https://github.com/user-attachments/assets/b1636bdb-8632-43bb-a90e-b638426ef0e3">
 
 
