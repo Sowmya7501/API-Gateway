@@ -1,0 +1,6 @@
+192.168.49.2 api-gateway.example.com
+
+
+curl -X POST http://api-gateway.example.com/user \
+     -H "Content-Type: application/json" \
+     -d '{"username":"sowmya"}'
